@@ -1,0 +1,2136 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/13/2022 2:41:19 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-CPE1NTJ"
+  DTS:CreatorName="DESKTOP-CPE1NTJ\Nuwanga Wijamuni"
+  DTS:DTSID="{189644E2-E78D-4C6E-A5A7-EC5ED76C8B45}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{6640CFCD-2919-4B2C-88AE-1A9205C7E691}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-CPE1NTJ.AmExpert_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D741A445-7E7B-4673-B88B-43E3F9735363}"
+      DTS:ObjectName="DESKTOP-CPE1NTJ.AmExpert_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-CPE1NTJ;Initial Catalog=AmExpert_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{65B45723-51E1-4323-856F-4CC71349FC02}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Nuwanga Wijamuni\Desktop\assgnment\Data SET\accmilativefacttable.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trance_id"
+              DTS:DTSID="{48B2A97C-766A-4161-8A97-507F520703F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{7BA0800A-5FAD-48E9-9082-EB310955565C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DC293679-301C-4927-BECA-87BE5A8E6F14}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Nuwanga Wijamuni\Desktop\assgnment\Data SET\accmilativefacttable.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trance_id"
+              DTS:DTSID="{924379FE-9651-46AB-82D3-CC7DA41AFD1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{00C4C4C4-CF7C-42B4-BAB7-AF20BD8C8B61}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{20547353-23D8-4A5E-AC21-84D0AFFD3549}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Nuwanga Wijamuni\Desktop\assgnment\Data SET\accmilativefacttable.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trance_id"
+              DTS:DTSID="{BA8A0716-D79F-4FB5-A4F6-CA45F2E0587E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{1CD49AA5-C088-4B6E-90D8-4FA49FE3AF3A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Accumilative Tranceaction Facts"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AE4CBE05-7CE7-4B17-AE21-EDC506BF4AAA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Accumilative Tranceaction Facts"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Accumilative Tranceaction Facts\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Accumilative Tranceaction Facts\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Derived Column.Inputs[Derived Column Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Derived Column.Inputs[Derived Column Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Accumilative Tranceaction Facts\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Output].Columns[Process Time]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Output].Columns[Process Time]"
+                      name="Process Time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEDIFF]("hh",#{Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]},#{Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("hh",accm_txn_create_time,accm_txn_complete_time)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Accumilative Tranceaction Facts\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accumilative Tranceaction Facts\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accumilative Tranceaction Facts\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[trance_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trance_id]"
+                      lineageId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[trance_id]"
+                      name="trance_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[trance_id]"
+                      dataType="i4"
+                      name="trance_id" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_complete_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accumilative Tranceaction Facts\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Left Input].Columns[trance_id]"
+                      cachedDataType="i4"
+                      cachedName="trance_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output].Columns[trance_id]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Left Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output].Columns[accm_txn_complete_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[trance_id]"
+                      cachedDataType="i4"
+                      cachedName="trance_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[trance_id]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[item_id]"
+                      cachedDataType="i4"
+                      cachedName="item_id"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[item_id]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Coustomer_id]"
+                      cachedDataType="i4"
+                      cachedName="Coustomer_id"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Coustomer_id]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[quantity]"
+                      cachedDataType="i4"
+                      cachedName="quantity"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[quantity]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[selling_price]"
+                      cachedDataType="r8"
+                      cachedName="selling_price"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[selling_price]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[outher_Discount]"
+                      cachedDataType="r8"
+                      cachedName="outher_Discount"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[outher_Discount]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[coupon_Discount]"
+                      cachedDataType="r8"
+                      cachedName="coupon_Discount"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[coupon_Discount]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[TrainKey]"
+                      cachedDataType="i4"
+                      cachedName="TrainKey"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[TrainKey]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Itemkey]"
+                      cachedDataType="i4"
+                      cachedName="Itemkey"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Itemkey]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[CoustomerKey]"
+                      cachedDataType="i4"
+                      cachedName="CoustomerKey"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[CoustomerKey]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[TimeKey]"
+                      cachedDataType="i4"
+                      cachedName="TimeKey"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[TimeKey]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Modified]"
+                      cachedDataType="dbDate"
+                      cachedName="Modified"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Modified]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[accm_txn_create_time]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[txn_process_time_hours]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="txn_process_time_hours"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[txn_process_time_hours]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[trance_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[trance_id]"
+                      name="trance_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Left Input].Columns[trance_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Left Input].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[item_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[item_id]"
+                      name="item_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[item_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Coustomer_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Coustomer_id]"
+                      name="Coustomer_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Coustomer_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[quantity]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[quantity]"
+                      name="quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[selling_price]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[selling_price]"
+                      name="selling_price">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[selling_price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[outher_Discount]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[outher_Discount]"
+                      name="outher_Discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[outher_Discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[coupon_Discount]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[coupon_Discount]"
+                      name="coupon_Discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[coupon_Discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[TrainKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[TrainKey]"
+                      name="TrainKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[TrainKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Itemkey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Itemkey]"
+                      name="Itemkey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Itemkey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[CoustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[CoustomerKey]"
+                      name="CoustomerKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[CoustomerKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[TimeKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[TimeKey]"
+                      name="TimeKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[TimeKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Modified]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[Modified]"
+                      name="Modified">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[Modified]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[accm_txn_create_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[txn_process_time_hours]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input].Columns[txn_process_time_hours]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accumilative Tranceaction Facts\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[TranceactionFacts] SET [accm_txn_complete_time] = ?, [txn_process_time_hours] =? WHERE [trance_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CPE1NTJ.AmExpert_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CPE1NTJ.AmExpert_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].Columns[Process Time]"
+                      cachedDataType="i4"
+                      cachedName="Process Time"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Output].Columns[Process Time]" />
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].Columns[trance_id]"
+                      cachedDataType="i4"
+                      cachedName="trance_id"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output].Columns[trance_id]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="dbTimeStamp"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accumilative Tranceaction Facts\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[TranceactionFacts]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-CPE1NTJ.AmExpert_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-CPE1NTJ.AmExpert_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[item_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[item_id]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[item_id]"
+                      name="item_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Coustomer_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Coustomer_id]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Coustomer_id]"
+                      name="Coustomer_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantity]"
+                      name="quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[selling_price]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[selling_price]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[selling_price]"
+                      name="selling_price"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[outher_Discount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[outher_Discount]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[outher_Discount]"
+                      name="outher_Discount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[coupon_Discount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[coupon_Discount]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[coupon_Discount]"
+                      name="coupon_Discount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[trance_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[trance_id]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[trance_id]"
+                      name="trance_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrainKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrainKey]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrainKey]"
+                      name="TrainKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Itemkey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Itemkey]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Itemkey]"
+                      name="Itemkey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoustomerKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CoustomerKey]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoustomerKey]"
+                      name="CoustomerKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TimeKey]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeKey]"
+                      name="TimeKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsertDate]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertDate]"
+                      name="InsertDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Modified]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Modified]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Modified]"
+                      name="Modified"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[txn_process_time_hours]"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[item_id]"
+                      dataType="i4"
+                      name="item_id" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Coustomer_id]"
+                      dataType="i4"
+                      name="Coustomer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[selling_price]"
+                      dataType="r8"
+                      name="selling_price" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[outher_Discount]"
+                      dataType="r8"
+                      name="outher_Discount" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[coupon_Discount]"
+                      dataType="r8"
+                      name="coupon_Discount" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[trance_id]"
+                      dataType="i4"
+                      name="trance_id" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TrainKey]"
+                      dataType="i4"
+                      name="TrainKey" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Itemkey]"
+                      dataType="i4"
+                      name="Itemkey" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CoustomerKey]"
+                      dataType="i4"
+                      name="CoustomerKey" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TimeKey]"
+                      dataType="i4"
+                      name="TimeKey" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[InsertDate]"
+                      dataType="dbDate"
+                      name="InsertDate" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Modified]"
+                      dataType="dbDate"
+                      name="Modified" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_complete_time" />
+                    <externalMetadataColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[txn_process_time_hours]"
+                      dataType="dbTimeStamp"
+                      name="txn_process_time_hours" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[item_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[item_id]"
+                      name="item_id" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Coustomer_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Coustomer_id]"
+                      name="Coustomer_id" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      name="quantity" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[selling_price]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[selling_price]"
+                      name="selling_price" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[outher_Discount]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[outher_Discount]"
+                      name="outher_Discount" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[coupon_Discount]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[coupon_Discount]"
+                      name="coupon_Discount" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[trance_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[trance_id]"
+                      name="trance_id" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrainKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TrainKey]"
+                      name="TrainKey" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Itemkey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Itemkey]"
+                      name="Itemkey" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CoustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CoustomerKey]"
+                      name="CoustomerKey" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TimeKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TimeKey]"
+                      name="TimeKey" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsertDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[InsertDate]"
+                      name="InsertDate" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Modified]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Modified]"
+                      name="Modified" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[txn_process_time_hours]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accumilative Tranceaction Facts\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Accumilative Tranceaction Facts\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort.Inputs[Sort Input].Columns[trance_id]"
+                      cachedDataType="i4"
+                      cachedName="trance_id"
+                      lineageId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[trance_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort.Inputs[Sort Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output].Columns[trance_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output].Columns[trance_id]"
+                      name="trance_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[trance_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accumilative Tranceaction Facts\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[item_id]"
+                      cachedDataType="i4"
+                      cachedName="item_id"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[item_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[Coustomer_id]"
+                      cachedDataType="i4"
+                      cachedName="Coustomer_id"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Coustomer_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[quantity]"
+                      cachedDataType="i4"
+                      cachedName="quantity"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[selling_price]"
+                      cachedDataType="r8"
+                      cachedName="selling_price"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[selling_price]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[outher_Discount]"
+                      cachedDataType="r8"
+                      cachedName="outher_Discount"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[outher_Discount]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[coupon_Discount]"
+                      cachedDataType="r8"
+                      cachedName="coupon_Discount"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[coupon_Discount]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[trance_id]"
+                      cachedDataType="i4"
+                      cachedName="trance_id"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[trance_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[TrainKey]"
+                      cachedDataType="i4"
+                      cachedName="TrainKey"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrainKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[Itemkey]"
+                      cachedDataType="i4"
+                      cachedName="Itemkey"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Itemkey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[CoustomerKey]"
+                      cachedDataType="i4"
+                      cachedName="CoustomerKey"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoustomerKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[TimeKey]"
+                      cachedDataType="i4"
+                      cachedName="TimeKey"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[InsertDate]"
+                      cachedDataType="dbDate"
+                      cachedName="InsertDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[Modified]"
+                      cachedDataType="dbDate"
+                      cachedName="Modified"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Modified]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[accm_txn_create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_create_time"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="accm_txn_complete_time"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input].Columns[txn_process_time_hours]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="txn_process_time_hours"
+                      lineageId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[item_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[item_id]"
+                      name="item_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[item_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Date]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Date]"
+                      name="Date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Coustomer_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Coustomer_id]"
+                      name="Coustomer_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Coustomer_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[quantity]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[quantity]"
+                      name="quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[selling_price]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[selling_price]"
+                      name="selling_price">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[selling_price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[outher_Discount]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[outher_Discount]"
+                      name="outher_Discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[outher_Discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[coupon_Discount]"
+                      dataType="r8"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[coupon_Discount]"
+                      name="coupon_Discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[coupon_Discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[trance_id]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[trance_id]"
+                      name="trance_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[trance_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[TrainKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[TrainKey]"
+                      name="TrainKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TrainKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Itemkey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Itemkey]"
+                      name="Itemkey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Itemkey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[CoustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[CoustomerKey]"
+                      name="CoustomerKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[CoustomerKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[TimeKey]"
+                      dataType="i4"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[TimeKey]"
+                      name="TimeKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[TimeKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[InsertDate]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[InsertDate]"
+                      name="InsertDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[InsertDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Modified]"
+                      dataType="dbDate"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[Modified]"
+                      name="Modified">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[Modified]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[txn_process_time_hours]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Accumilative Tranceaction Facts.Paths[Derived Column Output]"
+              endId="Package\Accumilative Tranceaction Facts\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\Accumilative Tranceaction Facts\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Accumilative Tranceaction Facts.Paths[Flat File Source Output]"
+              endId="Package\Accumilative Tranceaction Facts\Sort.Inputs[Sort Input]"
+              name="Flat File Source Output"
+              startId="Package\Accumilative Tranceaction Facts\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Accumilative Tranceaction Facts.Paths[Merge Join Output]"
+              endId="Package\Accumilative Tranceaction Facts\Derived Column.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\Accumilative Tranceaction Facts\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Accumilative Tranceaction Facts.Paths[OLE DB Source Output]"
+              endId="Package\Accumilative Tranceaction Facts\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Accumilative Tranceaction Facts\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Accumilative Tranceaction Facts.Paths[Sort Output]"
+              endId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Accumilative Tranceaction Facts\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Accumilative Tranceaction Facts.Paths[Sort Output1]"
+              endId="Package\Accumilative Tranceaction Facts\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Accumilative Tranceaction Facts\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="237,42"
+          Id="Package\Accumilative Tranceaction Facts"
+          TopLeft="472,200" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Accumilative Tranceaction Facts">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="99,42"
+          Id="Package\Accumilative Tranceaction Facts\Sort"
+          TopLeft="426,253" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Accumilative Tranceaction Facts\OLE DB Source"
+          TopLeft="789,105" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Accumilative Tranceaction Facts\Sort 1"
+          TopLeft="808,257" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Accumilative Tranceaction Facts\Flat File Source"
+          TopLeft="405,86" />
+        <EdgeLayout
+          Id="Package\Accumilative Tranceaction Facts.Paths[Flat File Source Output]"
+          TopLeft="479.25,128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,125"
+              Start="0,0"
+              End="0,117.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,117.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accumilative Tranceaction Facts.Paths[OLE DB Source Output]"
+          TopLeft="864.75,147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110"
+              Start="0,0"
+              End="0,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Accumilative Tranceaction Facts\Merge Join"
+          TopLeft="627,395" />
+        <EdgeLayout
+          Id="Package\Accumilative Tranceaction Facts.Paths[Sort Output]"
+          TopLeft="475.5,295">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="197.166666666667,100"
+              Start="0,0"
+              End="197.166666666667,92.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.2867756315008" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,55.2867756315008"
+                    Point2="0,59.2867756315008"
+                    Point3="4,59.2867756315008" />
+                  <mssgle:LineSegment
+                    End="193.166666666667,59.2867756315008" />
+                  <mssgle:CubicBezierSegment
+                    Point1="193.166666666667,59.2867756315008"
+                    Point2="197.166666666667,59.2867756315008"
+                    Point3="197.166666666667,63.2867756315008" />
+                  <mssgle:LineSegment
+                    End="197.166666666667,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accumilative Tranceaction Facts.Paths[Sort Output1]"
+          TopLeft="862,299">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-147.666666666667,96"
+              Start="0,0"
+              End="-147.666666666667,88.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.9153046062407" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.9153046062407"
+                    Point2="0,56.9153046062407"
+                    Point3="-4,56.9153046062407" />
+                  <mssgle:LineSegment
+                    End="-143.666666666667,56.9153046062407" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-143.666666666667,56.9153046062407"
+                    Point2="-147.666666666667,56.9153046062407"
+                    Point3="-147.666666666667,60.9153046062407" />
+                  <mssgle:LineSegment
+                    End="-147.666666666667,88.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Accumilative Tranceaction Facts\Derived Column"
+          TopLeft="614,513" />
+        <EdgeLayout
+          Id="Package\Accumilative Tranceaction Facts.Paths[Merge Join Output]"
+          TopLeft="693.25,437">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Accumilative Tranceaction Facts\OLE DB Command"
+          TopLeft="623,608" />
+        <EdgeLayout
+          Id="Package\Accumilative Tranceaction Facts.Paths[Derived Column Output]"
+          TopLeft="693,555">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.5,53"
+              Start="0,0"
+              End="16.5,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
+                  <mssgle:LineSegment
+                    End="12.5,26.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,26.5"
+                    Point2="16.5,26.5"
+                    Point3="16.5,30.5" />
+                  <mssgle:LineSegment
+                    End="16.5,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accumilative Tranceaction Facts\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
